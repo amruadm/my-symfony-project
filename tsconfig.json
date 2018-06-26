@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "outDir": "./assets/dist/js",
+    "noImplicitAny": true,
+    "jsx": "react"
+  },
+  "include": [
+    "./assets/typescript/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
