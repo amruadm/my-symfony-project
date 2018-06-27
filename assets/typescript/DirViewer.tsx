@@ -3,7 +3,15 @@ import * as ReactDOM from 'react-dom';
 import {Component} from 'react';
 import {isBoolean} from "util";
 
-export default class DirViewer extends Component {
+interface DirViewerProps { }
+
+interface DirViewerState {
+    error: any;
+    isLoaded: boolean;
+    items: Array<string>;
+}
+
+export default class DirViewer extends Component<DirViewerProps, DirViewerState> {
 
     constructor(props: any) {
         super(props);
@@ -30,14 +38,17 @@ export default class DirViewer extends Component {
                         error
                     })
                 }
-            );
+            )
+        ;
     }
 
     render() {
         return (
-            <div>
-
-            </div>
+            <ul className="list-group">
+                {this.state.items.map((item: any, index: any) => {
+                    return <li className="list-group-item">{item}</li>
+                })}
+            </ul>
         );
     }
 }

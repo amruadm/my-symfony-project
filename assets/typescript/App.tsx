@@ -8,16 +8,13 @@ import DirViewer from "./DirViewer";
 export default class App extends Component {
     render() {
         return (
-            <div className="app">
-                <div>
-                    <TestComponent/>
-                </div>
+            <div>
                 <DirViewer />
             </div>
         );
     }
 }
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     ReactDOM.render(<App />, document.body);
-// });
+window.addEventListener('DOMContentLoaded', () => {
+    ReactDOM.render(<App />, document.getElementById('app'));
+});
